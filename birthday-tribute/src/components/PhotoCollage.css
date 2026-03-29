@@ -1,0 +1,213 @@
+.collage-page {
+  width: 100%;
+  height: 100vh;
+  background: var(--maroon);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Lip prints ── */
+.lips-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.lip-print {
+  position: absolute;
+  width: 40px;
+  height: 22px;
+  animation: lipFade 6s ease-in-out infinite;
+}
+
+.lip-print::before,
+.lip-print::after {
+  content: '';
+  position: absolute;
+  background: var(--hot-pink);
+  border-radius: 50%;
+}
+
+/* Top lip */
+.lip-print::before {
+  width: 18px;
+  height: 14px;
+  top: 0;
+  left: 2px;
+  box-shadow: 16px 0 0 0 var(--hot-pink);
+}
+
+/* Bottom lip */
+.lip-print::after {
+  width: 34px;
+  height: 16px;
+  bottom: 0;
+  left: 3px;
+  border-radius: 0 0 50% 50%;
+}
+
+@keyframes lipFade {
+  0%, 100% { opacity: inherit; }
+  50% { opacity: 0.08; }
+}
+
+/* ── Content ── */
+.collage-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.collage-title {
+  font-family: var(--font-script);
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 36px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeSlideDown 0.5s ease-out both;
+}
+
+.collage-subtitle {
+  font-family: var(--font-script);
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--white);
+  font-style: italic;
+  margin-top: 36px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeSlideDown 0.6s ease-out 0.4s both;
+}
+
+/* ── Polaroids ── */
+.polaroid-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+}
+
+.polaroid {
+  background: var(--white);
+  padding: 10px 10px 36px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: polaroidIn 0.5s ease-out both;
+}
+
+.polaroid:hover {
+  z-index: 10;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.polaroid-1 {
+  transform: rotate(-8deg) translateX(16px);
+  z-index: 1;
+}
+.polaroid-1:hover {
+  transform: rotate(-4deg) translateX(16px) scale(1.05);
+}
+
+.polaroid-2 {
+  transform: rotate(2deg) translateY(-10px);
+  z-index: 3;
+}
+.polaroid-2:hover {
+  transform: rotate(0deg) translateY(-10px) scale(1.08);
+}
+
+.polaroid-3 {
+  transform: rotate(7deg) translateX(-16px);
+  z-index: 2;
+}
+.polaroid-3:hover {
+  transform: rotate(4deg) translateX(-16px) scale(1.05);
+}
+
+.polaroid-photo {
+  width: 150px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.photo-placeholder {
+  font-size: 36px;
+  opacity: 0.5;
+}
+
+.polaroid-caption {
+  height: 20px;
+}
+
+/* ── Bows ── */
+.bow {
+  position: absolute;
+  top: -8px;
+  font-size: 18px;
+  z-index: 5;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+
+.bow-left { left: 2px; transform: scaleX(-1); }
+.bow-right { right: 2px; }
+
+/* ── Animations ── */
+@keyframes fadeSlideDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes polaroidIn {
+  0% { opacity: 0; transform: translateY(40px) rotate(0deg) scale(0.8); }
+  100% { opacity: 1; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .collage-title {
+    font-size: 38px;
+  }
+
+  .collage-subtitle {
+    font-size: 30px;
+  }
+
+  .polaroid-photo {
+    width: 110px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .polaroid-group {
+    flex-direction: row;
+    gap: -10px;
+  }
+
+  .polaroid-photo {
+    width: 80px;
+    height: 100px;
+  }
+
+  .polaroid {
+    padding: 6px 6px 24px;
+  }
+
+  .collage-title {
+    font-size: 30px;
+  }
+
+  .collage-subtitle {
+    font-size: 24px;
+  }
+}

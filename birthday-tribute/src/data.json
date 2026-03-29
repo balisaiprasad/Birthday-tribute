@@ -1,0 +1,43 @@
+{
+  "siteTitle": "Letters for you",
+  "welcomeMessage": "To Greeshmaa, on your special day",
+  "letters": [
+    {
+      "id": 1,
+      "label": "Letter 1",
+      "type": "heartfelt_letter",
+      "title": "To Greeshma Chanduri",
+      "content": "I know you don't like when i call you Greeshma(hold on to that happy face till the end). Like always  I felt an unconditional attachment towards you & i don't how but it stayed  with me.I never thought i would ever feel this emotionally connected to someone.even staying miles apart\n\nEvery single memory with you is special to me and i want to tell you how much you mean to me.\n\nNot because we're always doing something big or exciting, but because it's you.\n\nLooking at you, I feel like I'm home and always remember i am here! beside you for you.",
+      "background": "graph_paper",
+      "accentColor": "#FF0000"
+    },
+    {
+      "id": 2,
+      "label": "Letter 2",
+      "type": "photo_collage",
+      "title": "I MISS U",
+      
+      "background": "lips_pattern",
+      "photos": ["photo1.jpg", "photo2.jpg", "photo3.jpg"],
+      "accentColor": "#D4006A"
+    },
+    {
+      "id": 3,
+      "label": "Letter 3",
+      "type": "wishes",
+      "title": "Wishing you all the happiness and a year filled with love paisal and me ",
+      "message": "may all ur wish comes true. ",
+      "background": "pink_blobs",
+      "accentColor": "#FF69B4"
+    },
+    {
+      "id": 4,
+      "label": "last but not least",
+      "type": "birthday_wish",
+      "title": "HAPPIEST BIRTHDAY!",
+      "photo": "/birthday-photo.jpg",
+      "background": "solid_red",
+      "accentColor": "#FF0000"
+    }
+  ]
+}
