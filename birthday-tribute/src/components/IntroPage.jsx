@@ -18,8 +18,8 @@ export default function IntroPage({ siteTitle, onEnter }) {
         {/* Title text */}
         <div className="intro-text">
           <h1 className="intro-title">
-            <span className="title-line">Letters</span>
-            <span className="title-line">for you</span>
+            <span className="title-line">Hi</span>
+            <span className="title-line">Greeshma</span>
           </h1>
           <div className="intro-arrow">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
