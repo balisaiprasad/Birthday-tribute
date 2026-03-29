@@ -46,7 +46,7 @@ function App() {
       case 'intro':
         return (
           <IntroPage
-            siteTitle={data.siteTitle}
+            siteTitle="Hi Greeshma"
             onEnter={() => navigateTo('grid')}
           />
         );
